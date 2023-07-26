@@ -2,11 +2,11 @@ import socket
 import tkinter as tk
 from datetime import datetime
 
+from atlas_gui import settings_tk, root
 from atlas_socket import connect, socket
 
 connect()
-root = tk.Tk()
-root.geometry("500x200")
+settings_tk()
 
 
 def im_about_to_lunch():

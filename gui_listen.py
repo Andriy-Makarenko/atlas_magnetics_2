@@ -1,10 +1,10 @@
 import tkinter as tk
 from tkinter import messagebox
 
-from atlas_socket import socket, host, port, bind, listen
+from atlas_gui import settings_tk, root
+from atlas_socket import socket, bind, listen
 
-root = tk.Tk()
-root.geometry("500x200")
+settings_tk()
 
 label = tk.Label(root, text='Waiting for message:', font=('Arial', 16))
 label.pack()
