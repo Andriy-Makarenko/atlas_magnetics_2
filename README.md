@@ -1,6 +1,7 @@
 # atlas_magnetics
 
 **Task 1**
+
 You with your friend both work at a very confidential and secure company. That's why your PCs
 don't have an internet connection. There isn't any local internal messenger too. Both of you work on
 different floors. But you would like to have the ability to call your friend for lunch with you. As your
@@ -17,11 +18,12 @@ Tasks requirements:
   • Both application sources should be uploaded to git.
 
 **Task 2**
+
 Calculate the resistive voltage divider: at the input voltage of 12V at the output should be 3V. The
 maximum current through the divider should not exceed 5mA. Resistor values should be selected from
 the E24 series.
 
-
+![img.png](img.png)
 ## Installing using Github
 
 ```shell

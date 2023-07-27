@@ -22,18 +22,21 @@ def are_you_going_to_have_lunch():
 
         print('Connection from:', address)
 
-        while True:
-            data = connection.recv(1024).decode()
-            if not data:
-                break
+        socket.settimeout(20)
 
-            print('Received:', data)
-            text.delete(0, 'end')
-            text.insert(0, data)
-            messagebox.showinfo(title="Message from colleague", message=data)
-            connection.sendall(data.encode())
+        try:
+            while True:
+                data = connection.recv(1024).decode()
 
-        connection.close()
+                print('Received:', data)
+                text.delete(0, 'end')
+                text.insert(0, data)
+                messagebox.showinfo(title="Message from colleague", message=data)
+                connection.sendall(data.encode())
+
+        except ConnectionResetError:
+            messagebox.showinfo(title="Info", message="Connection lost")
+            connection.close()
 
 
 if __name__ == '__main__':

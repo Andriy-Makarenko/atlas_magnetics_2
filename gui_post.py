@@ -10,7 +10,6 @@ settings_tk()
 
 
 def im_about_to_lunch():
-    label.config(text="Enter the message or send the default one:")
     message = entry.get()
     date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -26,7 +25,7 @@ def im_about_to_lunch():
 label = tk.Label(root, text='Enter the message or send the default one:', font=('Arial', 16))
 label.pack()
 
-entry = tk.Entry(root, width=50)
+entry = tk.Entry(root, width=80)
 entry.pack(padx=15, pady=15)
 
 button = tk.Button(root, text='Send', command=im_about_to_lunch)
